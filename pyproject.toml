@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "face-keypoints"
+version = "0.1.0"
+description = "Face keypoint detection utilities and training pipelines"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Pattarapol", email = "your.email@example.com" }
+]
+keywords = ["face", "keypoints", "mediapipe", "computer-vision", "deep-learning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.8"
+
+# package directory using src layout
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# runtime dependencies (keep versions broad; pin if you prefer)
+dependencies = [
+  "numpy",
+  "opencv-python",
+  "mediapipe",
+  "albumentations",
+  "tqdm",
+  "tensorboard"
+]
